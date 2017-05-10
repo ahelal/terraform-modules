@@ -1,0 +1,22 @@
+[
+  {
+    "cpu": ${cpu_unit},
+    "essential": true,
+    "image": "${image_tag}",
+    "memory": ${memory_hard},
+    "memoryReservation": ${memory_soft},
+    "name": "${container_name}",
+    "environment": [
+        {
+            "name": "Environment",
+            "value": "${environment}"
+        }
+    ],
+    "portMappings": [
+      {
+        "containerPort": ${container_port},
+        "hostPort": ${container_port}
+      }
+    ]
+  }
+]
