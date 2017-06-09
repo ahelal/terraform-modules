@@ -10,7 +10,7 @@ data "template_file" "task_definition" {
 
   vars {
     image_tag        = "${var.image_tag}"
-    container_name   = "${var.name}-${var.environment}"
+    container_name   = "${var.name}_${var.environment}"
     cpu_unit         = "${var.containers_cpu_unit}"
     memory_soft      = "${var.container_memory_reservation}"
     memory_hard      = "${var.container_memory_hard}"

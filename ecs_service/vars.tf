@@ -17,6 +17,7 @@ variable "environment" {
   type = "string"
 }
 
+
 variable "container_port" {
   default = 80
 }
