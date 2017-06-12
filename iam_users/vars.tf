@@ -17,6 +17,11 @@ variable "destroys" {
   default     = {}
 }
 
+variable "force_destroy_default" {
+  description = "Default force destroy value"
+  default     = false
+}
+
 /*
 ## Vars boiler plate module vars
 variable "usernames" {
