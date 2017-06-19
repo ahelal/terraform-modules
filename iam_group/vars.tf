@@ -1,20 +1,29 @@
-
-variable "groups" {
-  description = "A list of group users"
-  type        = "list"
+variable "name" {
+  description = "A string of group name"
+  type        = "string"
 }
 
-variable "groups_polices" {
-  description = "A map of group policies"
-  type        = "map"
-  default = {}
+variable "path" {
+  description = "A string that defines AWS IAM group path"
+  type        = "string"
+  default     = "/"
 }
 
-variable "group_paths" {
-  default = {}
+variable "group_policy" {
+  description = "A string of group policy"
+  type        = "string"
+  default     = ""
+}
+
+variable "policy_arn" {
+  description = "A string for the group policy ARN"
+  type = "string"
+  default = ""
 }
 
 variable "group_membership" {
-  default = {}
-}
+  description = "A list of users to associate with the group"
+  type = "list"
+  default = []
 
+}
