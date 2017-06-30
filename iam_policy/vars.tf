@@ -1,25 +1,25 @@
 
 variable "policyName" {
-  description = "A list of policies"
-  type        = "list"
+  description = "Policy name"
+  type        = "string"
 }
 
 /* required */
 variable "policy" {
-  description = "A map of AWS policies"
-  type        = "map"
+  description = "AWS policy"
+  type        = "string"
 }
 
 /* Defaults to "/" if not defined */
-variable "policyPaths" {
-  description = "A map of AWS policy paths"
-  type        = "map"
-  default     = {}
+variable "policyPath" {
+  description = "AWS policy path"
+  type        = "string"
+  default     = "/"
 }
 
 /* Defaults to "" if not defined */
 variable "policyDescription" {
-  description = "A map of AWS policy description"
-  type        = "map"
-  default     = {}
+  description = "AWS policy description"
+  type        = "string"
+  default     = ""
 }
