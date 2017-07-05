@@ -4,10 +4,11 @@
  * Usage:
  *
  *    module "my_user" {
- *      source  = "github.com/ahelal/terraform-modules/iam_user"
- *      name    = "user"
- *      path    = "/"
- *      destroy = "true"
+ *      source     = "github.com/ahelal/terraform-modules/iam_user"
+ *      name       = "user"
+ *      path       = "/"
+ *      destroy    = "true"
+ *      public_key = "<pub key>"
  *    }
  *
  */
@@ -32,4 +33,8 @@ variable "destroy" {
   default     = "false"
 }
 
-
+variable "public_key" {
+  description = "Public key for AWS Key pair"
+  type        = "string"
+  default     = ""
+}
